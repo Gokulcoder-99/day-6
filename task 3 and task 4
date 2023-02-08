@@ -1,0 +1,35 @@
+class Person {
+  constructor(name, age, address) {
+    this.name = name;
+    this.age = age;
+    this.address = address;
+  }
+
+  getDetails() {
+    return `Name: ${this.name}\nAge: ${this.age}\nAddress: ${this.address}`;
+  }
+}
+
+const person = new Person("John Doe", 30, "123 Main St.");
+console.log(person.getDetails());
+
+------------------------------------------------------------------------
+
+class UberPrice {
+  constructor(distance, time) {
+    this.distance = distance;
+    this.time = time;
+  }
+
+  calculatePrice() {
+    const basePrice = 5;
+    const pricePerKilometer = 1.5;
+    const pricePerMinute = 0.25;
+
+    const price = basePrice + this.distance * pricePerKilometer + this.time * pricePerMinute;
+    return `Price: $${price.toFixed(2)}`;
+  }
+}
+
+const uberPrice = new UberPrice(10, 30);
+console.log(uberPrice.calculatePrice());
